@@ -463,6 +463,9 @@ public class AddressBook {
                 personFriend = getPersonNameByInput();
             }
         }
+        if ( person == personFriend ) {
+            return "You cannot friend yourself, Mr Forever Alone.";
+        }
         if ( isAlreadyFriend(person,personFriend) ) {
             return "Both persons are already friends!";
         } else {
